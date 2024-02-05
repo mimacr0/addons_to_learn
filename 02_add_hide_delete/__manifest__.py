@@ -17,7 +17,7 @@
 
 {
     'name': 'Add Hide and Delete',
-    'version': '16.0.1.0.0',
+    'version': '16.0',
     'author': 'Mimacro',
     'maintainer': 'David Fernández',
     'website': 'http://mimacro.com',

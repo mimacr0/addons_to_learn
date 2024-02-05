@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <odoo> 
 <!-- Comentario en la Views --> 
+    <record id="view_ej_pet_search" model="ir.ui.view">
+        <field name="name">ej.pet.seach</field>
+        <field name="model">ej.pet</field>
+        <field name="arch" type="xml"> 
+            <search string="Pets Search">
+                <field name="name" string="name" filter_domain="['|', ('name', 'ilike', self), ('color', 'ilike', self)]"/>
+                <field name="color" string="color" />
+
+                <!--<field name="name"/>
+                <filter string="Nombre" name="name" domain="[('name', 'ilike', 'self')]"/>
+                <field name="color"/>
+                <filter string="Color" name="Color" domain="[('color', 'ilike', 'self')]"/>-->  
+
+                <group expand="0" string="Group By">
+                    <filter string="Type" name="type" domain="[]" context="{'group_by': 'type'}"/>
+                </group>
+            </search>
+        </field> 
+    </record> 
+
      <record id="view_ej_pet_form" model="ir.ui.view">
         <field name="name">ej.pet.form</field>
         <field name="model">ej.pet</field>
@@ -19,15 +39,16 @@
             </form> 
         </field> 
     </record> 
+
      <record id="view_tree_ej_pet" model="ir.ui.view">
         <field name="name">ej.pet.tree</field>
         <field name="model">ej.pet</field>
         <field name="arch" type="xml"> 
            <tree> 
                     <field name="name" optional="show"/>
-                    <field name="age"/>
+                    <field name="age" optional="hide"/>
                     <field name="color"/>
-                    <field name="type"/>
+                    <field name="type" optional="hide"/>
            </tree> 
         </field> 
     </record> 

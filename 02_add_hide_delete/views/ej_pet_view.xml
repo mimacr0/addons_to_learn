@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+
     <record id="view_hello_world_inh_form" model="ir.ui.view">
         <field name="name">view.hello.world.inh.form</field>
         <field name="model">ej.pet</field>
@@ -13,7 +14,7 @@
                 <field name="my_age" />
             </field>
 
-            <field name="type" position="replace" />
+            <field name="type"/>
         </field>
     </record>
 

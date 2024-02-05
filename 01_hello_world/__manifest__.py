@@ -17,7 +17,7 @@
 
 {
     'name': '01 Hello World MFH',
-    'version': '16.0.1.0.0',
+    'version': '16.0',
     'author': 'Mimacro',
     'maintainer': 'David Fernández',
     'website': 'http://mimacro.com',
@@ -26,7 +26,7 @@
     'summary': 'Hello World.',
     'depends': ['base'],
     'data': [
-              'views/views.xml',
+              'views/ej_pet_views.xml',
               'security/ir.model.access.csv'
             ],
     'images': ['static/description/banner.jpg'],
